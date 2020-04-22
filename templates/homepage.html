@@ -1,0 +1,20 @@
+<html>
+    <h3>
+        {{request.session.SES_USERS.0}}&nbsp;&nbsp;&nbsp;&nbsp;[{{request.session.SES_USERS.1}}]&nbsp;&nbsp;&nbsp;{{request.session.LTIME}}&nbsp;&nbsp;&nbsp;<img src='/static/{{request.session.SES_USERS.5}}' width='30' height='30'/><hr color="red">
+    </h3>
+    <table>
+        <tr>
+            <td valign='top'>
+            <a href="/area_view" target="mw">Add New Area</a><br>
+            <a href="/fetch_all_area" target="mw">Display Areas</a><br>
+            <a href="/switch_view" target="mw">Add Switches</a><br>
+            <a href="/switch_view" target="mw">Display Switches</a><br>
+            <a href="/action_view" target="mw">Actions</a><br>
+            <a href="/user_login">Logout</a>
+            </td>
+            <td>
+                <iframe frameborder='0' name="mw" height="800" width="800"></iframe>
+            </td>
+        </tr>
+    </table>
+</html>

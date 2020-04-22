@@ -1,0 +1,51 @@
+<html>
+    <a href="/check_login">Back</a>
+    <form action="/area_submit" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+        <!-- {% csrf_token %} - means request is post-->
+        <!-- <form action="/area_submit"> -->
+        <table>
+            <caption>
+                Area Registration
+            </caption>
+            <tr>
+                <td>
+                    <b>
+                        <i>
+                            Area Name:
+                        </i>
+                    </b>
+                </td>
+                <td>
+                    <input type='text' name="areaname">
+                </td>
+            </tr>
+            
+            <tr>
+                    <td>
+                            <b>
+                                <i>
+                                    Description:
+                                </i>
+                            </b>
+                        </td>
+                        <td>
+                            <input type='text' name="description"> 
+                        </td>
+            </tr>
+            <tr>
+                    <td>
+                            <b>
+                                <i>
+                                    Picture:
+                                </i>
+                            </b>
+                        </td>
+                        <td>
+                            <input type='file' name="picture">
+                        </td>
+            </tr>
+        </table>
+        <input type="submit">
+    </form>
+    {{message}}
+</html>

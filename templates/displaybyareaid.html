@@ -1,0 +1,69 @@
+<html>
+    <table>
+        <tr>
+            <td>
+    <form action="/edit_delete_area">
+        
+        <table>
+            <caption>
+                Area Registration
+            </caption>
+            <tr>
+                <td>
+                    <b>
+                        <i>
+                            Area Id:
+                        </i>
+                    </b>
+                </td>
+                <td>
+                    <input type='text' value="{{row.0}}" name="areaid" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                        <i>
+                            Area Name:
+                        </i>
+                    </b>
+                </td>
+                <td>
+                    <input type='text' value="{{row.1}}" name="areaname">
+                </td>
+            </tr>
+            
+            <tr>
+                    <td>
+                            <b>
+                                <i>
+                                    Description:
+                                </i>
+                            </b>
+                        </td>
+                        <td>
+                            <input type='text' name="description" value="{{row.2}}"> 
+                        </td>
+            </tr>
+        </table>
+        
+        
+        <input type="submit" value="Edit" name="btn"> 
+        <input type="submit" value="Delete" name="btn">
+    </form>
+    </td>
+
+    <td>
+        <form action="/edit_picture" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+            <input type="hidden" name="areaid" value="{{row.0}}">
+            <img src="/static/{{row.3}}" width='150' height="150"><br>
+            <input type="file" name="areapicture"><br><br>
+            <input type="submit" name="btn" value="Edit Picture">
+            </form>
+
+    </td>
+</tr>
+
+</table>
+
+</html>

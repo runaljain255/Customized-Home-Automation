@@ -1,0 +1,87 @@
+<html>
+    <a href="/user_login">Sign In</a>
+    <form action="/users_submit" method="post" enctype="multipart/form-data"> {% csrf_token %}
+        <!-- {% csrf_token %} - means request is post-->
+        <table>
+            <caption>
+                User Registration
+            </caption>
+            <tr>
+                <td>
+                    <b>
+                        <i>
+                            Email ID:
+                        </i>
+                    </b>
+                </td>
+                <td>
+                    <input type='email' name="email">
+                </td>
+            </tr>
+            
+            <tr>
+                    <td>
+                            <b>
+                                <i>
+                                    Name:
+                                </i>
+                            </b>
+                        </td>
+                        <td>
+                            <input type='text' name="first" placeholder="First Name"> 
+                            <input type="text" name="second" placeholder="Last Name">
+                        </td>
+            </tr>
+            <tr>
+                    <td>
+                            <b>
+                                <i>
+                                    Birth Date:
+                                </i>
+                            </b>
+                        </td>
+                        <td>
+                            <input type='date' name="dob">
+                        </td>
+            </tr>
+            <tr>
+                    <td>
+                            <b>
+                                <i>
+                                    Mobile No:
+                                </i>
+                            </b>
+                        </td>
+                        <td>
+                            <input type='text' name="mobile">
+                        </td>
+            </tr>
+            <tr>
+                    <td>
+                            <b>
+                                <i>
+                                    Password:
+                                </i>
+                            </b>
+                        </td>
+                        <td>
+                            <input type='password' name="password">
+                        </td>
+            </tr>
+            <tr>
+                    <td>
+                            <b>
+                                <i>
+                                    Picture:
+                                </i>
+                            </b>
+                        </td>
+                        <td>
+                            <input type='file' name="picture">
+                        </td>
+            </tr>
+        </table>
+        <input type="submit">
+    </form>
+    {{message}}
+</html>

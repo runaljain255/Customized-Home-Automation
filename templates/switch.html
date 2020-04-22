@@ -1,0 +1,61 @@
+<html>
+    <form action="/switch_submit" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <table>
+            <caption>Switch Registration</caption>
+            <tr>
+                <td>
+                    <b>
+                        <i>
+                            Area ID:
+                        </i>
+                    </b>
+                </td>
+                <td>
+                    <select name='areaid'>
+                        {% for row in rows %}
+                        <option value="{{row.0}}">{{row.1}}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                    <td>
+                        <b>
+                            <i>
+                                Purpose:
+                            </i>
+                        </b>
+                    </td>
+                    <td>
+                        <input type="text" name="purpose">
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                            <b>
+                                <i>
+                                    Key:
+                                </i>
+                            </b>
+                        </td>
+                        <td>
+                            <input type="text" name="key">
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <b>
+                                    <i>
+                                        Icon:
+                                    </i>
+                                </b>
+                            </td>
+                            <td>
+                                <input type="file" name="picture">
+                            </td>
+                        </tr>
+        </table><br>
+        <input type="submit"><br><br>
+        {{message}}
+    </form>
+</html>

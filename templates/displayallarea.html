@@ -1,0 +1,38 @@
+<form>
+    <table cellspacing='1'>
+        <caption><b><i>List of My Area</i></b></caption>
+        <tr>
+            <th>
+                Area ID
+            </th>
+            <th>
+                    Area Name
+                </th>
+                <th>
+                        Description
+                    </th>
+                    <th>
+                            Picture
+                        </th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>
+                {{row.0}}
+            </td>
+            <td>
+                {{row.1}}
+            </td>
+            <td>
+                {{row.2}}
+            </td>
+            <td>
+                <img src="/static/{{row.3}}" width='50' height='50'>
+            </td>
+            <td>
+                <a href="/display_by_id?areaid={{row.0}}">Edit/delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>

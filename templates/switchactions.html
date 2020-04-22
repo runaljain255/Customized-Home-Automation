@@ -1,0 +1,17 @@
+<html>
+    <center>
+        <form action="/pubnub_action">
+    <table>
+        <tr>
+            {% for row in rows %}
+            <th>
+                {{row.3}}<br>
+                <img src='/static/{{row.5}}' width='150' height='150'><br>
+                <button name="btn" value="{{row.4}} ON">ON</button> <button name="btn" value="{{row.4}} OFF">OFF</button>
+            </th>
+            {% endfor %}
+        </tr>
+    </table>
+    </form>
+    </center>
+</html>

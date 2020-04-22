@@ -1,0 +1,15 @@
+<html>
+    <center>
+    <table>
+        <tr>
+            {% for row in rows %}
+            <th>
+                {{row.1}}<br>
+                <img src='/static/{{row.3}}' width='150' height='150'><br>
+                <a href='/switch_action?areaid={{row.0}}'>Action</a>
+            </th>
+            {% endfor %}
+        </tr>
+    </table>
+    </center>
+</html>
